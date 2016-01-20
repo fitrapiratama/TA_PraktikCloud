@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+	head
+		link(rel='stylesheet', href='http://#{baseurl}/css/bootstrap.min.css')
+	body
+		h2.text-center DATA PAKAIAN
+		hr
+		br
+		div().row
+			div().col-md-8.col-md-offset-2
+				if objects.length > 0
+					div.panel.panel-default
+						div.panel-body
+							table(data-role='table').table.table-responsive.table-striped
+								thead
+									tr
+										th='#'
+										th='Kode Pakaian'
+										th='Nama Pakaian'
+										th='Harga'
+										th='Jumlah'
+								tbody
+									each obj,index in objects
+										tr
+											td=index+1
+											td
+												a(href='http://#{baseurl}/#{collection}/#{obj._id}', title='Lihat record ini') #{obj.KodeBaju}
+											td
+												a(href='http://#{baseurl}/#{collection}/#{obj._id}', title='Lihat record ini') #{obj.NAMA}
+											td
+												a(href='http://#{baseurl}/#{collection}/#{obj._id}', title='Lihat record ini') #{obj.Harga}
+											td
+												a(href='http://#{baseurl}/#{collection}/#{obj._id}', title='Lihat record ini') #{obj.Jumlah}
+											td
+												
+							a(role='button',href='http://#{baseurl}/#{collection}/new').btn.btn-success Tambah Data

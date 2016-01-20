@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+	head
+		link(rel='stylesheet', href='../css/bootstrap.min.css')
+		style .btn {margin:10px 10px 10px 0px;}
+	body
+		#container
+			div.col-md-8.col-md-offset-2
+				div.panel.panel-default
+					div.panel-heading Masukan Data Pakaian
+					div.panel-body
+						form(method='post', action='./')
+							div.form-group
+								label(for='KodeBaju') Kode Baju
+								input(type='text', name='KodeBaju', id='KodeBaju', placeholder='Kode Baju').form-control
+							div.form-group
+								label(for='NAMA') Nama Pakaian
+								input(type='text', name='NAMA', id='NAMA', placeholder='Nama Pakaian').form-control
+							div.form-group
+								label(for='Harga') Harga Pakaian
+								input(type='text' name='Harga', id='Harga', placeholder='Harga Pakaian').form-control
+							div.form-group
+								label(for='Jumlah') Jumlah
+								input(type='text' name='Jumlah', id='Jumlah', placeholder='Jumlah Pakaian').form-control
+							
+							input(type='submit', value='Tambahkan').btn.btn-success
+							a(href='/#{collection}', role='button').btn.btn-danger Batal

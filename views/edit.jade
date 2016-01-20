@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+	head
+		link(rel='stylesheet', href='../../css/bootstrap.min.css')
+		style .btn {margin:10px 10px 10px 0px;}
+	body
+		#container
+			- var obj = objects
+			div.col-md-8.col-md-offset-2
+				div.panel.panel-default
+					div.panel-heading
+						Ubah Data Pakaian
+					div.panel-body
+						form(method='post', action='')
+							div.form-group
+								label(for='KodeBaju') Kode Baju
+								input(type='text', name='KodeBaju', id='KodeBaju', value='#{obj.KodeBaju}').form-control
+							div.form-group
+								label(for='NAMA') Nama Pakaian
+								input(type='text', name='NAMA', id='NAMA', value='#{obj.NAMA}').form-control
+							div.form-group
+								label(for='Harga') Harga Pakaian
+								input(type='Harga' name='Harga', id='Harga', value='#{obj.Harga}').form-control
+							div.form-group
+								label(for='Jumlah') Jumlah Pakaian
+								input(type='Jumlah' name='Jumlah', id='Jumlah', value='#{obj.Jumlah}').form-control
+							div.form-group
+								input(type='submit', value='Ubah').btn.btn-warning
+								a(href='/#{collection}', role='button').btn.btn-danger Batal

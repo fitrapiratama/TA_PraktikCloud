@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+	head
+		link(rel='stylesheet', href='../css/bootstrap.min.css')
+		style .dl-horizontal dt {text-align:left;} .btn {margin:10px 10px 10px 0;}
+	body
+		div().row
+			div().col-md-8.col-md-offset-2
+				- var obj = objects
+				if obj
+					div.panel.panel-default
+						div.panel-body
+							dl.dl-horizontal
+								dt='Kode Pakaian'
+								dd #{obj.KodeBaju}
+								dt='Nama Pakaian'
+								dd #{obj.NAMA}
+								dt='Harga Pakaian'
+								dd #{obj.Harga}
+								dt='Jumlah Pakaian'
+								dd #{obj.Jumlah}
+								dd
+									a(href='edit/#{obj._id}', role='button').btn.btn-warning Ubah Data
+									
+									a(href='delete/#{obj._id}', role='button').btn.btn-danger Hapus Data
+									
+									a(href='../#{collection}', role='button').btn.btn-primary DATA Pakaian 
